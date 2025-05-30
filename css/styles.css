@@ -35,6 +35,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem;
+  flex-wrap: wrap;
 }
 
 .logo img {
@@ -44,6 +45,7 @@ header {
 nav ul {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
 nav ul li a {
@@ -83,13 +85,56 @@ nav ul li a.current {
 
 /* Sections */
 .section {
-  padding: 2rem 2rem;
+  padding: 2rem;
   background: #fff;
   margin: 1rem 0;
 }
 
 .section h2 {
   margin-bottom: 1rem;
+}
+
+/* Product Card Styles */
+.product-card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin: 16px;
+  max-width: 300px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  background-color: #fdfdfd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  border-radius: 6px;
+}
+
+.product-card img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+.product-card select {
+  padding: 5px;
+  margin-top: 8px;
+  width: 100%;
+}
+
+.wishlist-btn,
+.buy-btn {
+  background-color: #f3f3f3;
+  border: 1px solid #bbb;
+  padding: 8px 12px;
+  margin: 6px 4px;
+  font-size: 0.9em;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+.wishlist-btn:hover,
+.buy-btn:hover {
+  background-color: #ddd;
 }
 
 /* Footer */
@@ -101,12 +146,20 @@ footer {
   margin-top: 2rem;
 }
 
+/* Responsive */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
     align-items: center;
   }
+
   .hero h1 {
     font-size: 2rem;
+  }
+
+  .product-card {
+    max-width: 90%;
+    margin: 1rem auto;
+    display: block;
   }
 }
