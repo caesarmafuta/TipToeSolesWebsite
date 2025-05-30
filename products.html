@@ -5,35 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>TipToe Soles | Products</title>
   <link rel="stylesheet" href="css/styles.css" />
-  <style>
-    .product-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-      justify-content: center;
-    }
-    .product-card {
-      border: 1px solid #ccc;
-      padding: 1rem;
-      max-width: 280px;
-      text-align: center;
-      background: #fff;
-    }
-    .product-card img {
-      width: 100%;
-      height: auto;
-    }
-    .product-card h3 {
-      margin-top: 0.8rem;
-      font-size: 1.2rem;
-    }
-    .product-card select, .product-card button {
-      margin-top: 10px;
-      padding: 8px;
-      width: 100%;
-      font-size: 1rem;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -54,81 +25,93 @@
 
   <section class="section">
     <h2>Men’s Shoes</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="images/gary-tan.jpg" alt="Gary Tan Shoes">
-        <h3>GARY (Tan) – $79.00</h3>
-        <p>US 6–11</p>
-        <select>
-          <option>Select Size</option>
-          <option>US 6</option><option>US 7</option><option>US 8</option><option>US 9</option><option>US 10</option><option>US 11</option>
-        </select>
-        <button>Order</button>
-      </div>
-      <div class="product-card">
-        <img src="images/gary-black.jpg" alt="Gary Black Shoes">
-        <h3>GARY (Black) – $79.00</h3>
-        <p>US 6–11</p>
-        <select>
-          <option>Select Size</option>
-          <option>US 6</option><option>US 7</option><option>US 8</option><option>US 9</option><option>US 10</option><option>US 11</option>
-        </select>
-        <button>Order</button>
-      </div>
-      <div class="product-card">
-        <img src="images/work-and-walk-chestnut.jpg" alt="Work and Walk Shoes">
-        <h3>Work and Walk – $85.00</h3>
-        <p>Chestnut – US 6–11</p>
-        <select>
-          <option>Select Size</option>
-          <option>US 6</option><option>US 7</option><option>US 8</option><option>US 9</option><option>US 10</option><option>US 11</option>
-        </select>
-        <button>Order</button>
-      </div>
+
+    <div class="product-card">
+      <img src="images/gary-tan.jpg" alt="Gary Tan">
+      <p><strong>GARY – Tan</strong> – US 6–11 – $79.00</p>
+      <label for="size-gary-tan">Size:</label>
+      <select id="size-gary-tan">
+        <option>6</option><option>7</option><option>8</option>
+        <option>9</option><option>10</option><option>11</option>
+      </select><br><br>
+      <button class="wishlist-btn">❤️ Add to Wishlist</button>
+      <button class="buy-btn">🛒 Buy Now (Coming Soon)</button>
     </div>
 
+    <div class="product-card">
+      <img src="images/gary-black.jpg" alt="Gary Black">
+      <p><strong>GARY – Black</strong> – US 6–11 – $79.00</p>
+      <label for="size-gary-black">Size:</label>
+      <select id="size-gary-black">
+        <option>6</option><option>7</option><option>8</option>
+        <option>9</option><option>10</option><option>11</option>
+      </select><br><br>
+      <button class="wishlist-btn">❤️ Add to Wishlist</button>
+      <button class="buy-btn">🛒 Buy Now (Coming Soon)</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/work-and-walk-chestnut.jpg" alt="Work and Walk Chestnut">
+      <p><strong>Work and Walk</strong> – Chestnut – US 6–11 – $85.00</p>
+      <label for="size-work">Size:</label>
+      <select id="size-work">
+        <option>6</option><option>7</option><option>8</option>
+        <option>9</option><option>10</option><option>11</option>
+      </select><br><br>
+      <button class="wishlist-btn">❤️ Add to Wishlist</button>
+      <button class="buy-btn">🛒 Buy Now (Coming Soon)</button>
+    </div>
+  </section>
+
+  <section class="section">
     <h2>Women’s Shoes</h2>
-    <div class="product-grid">
-      <div class="product-card">
-        <img src="images/sally-black.jpg" alt="Sally Black Shoes">
-        <h3>Sally (Black) – $75.00</h3>
-        <p>US 6–11</p>
-        <select>
-          <option>Select Size</option>
-          <option>US 6</option><option>US 7</option><option>US 8</option><option>US 9</option><option>US 10</option><option>US 11</option>
-        </select>
-        <button>Order</button>
-      </div>
-      <div class="product-card">
-        <img src="images/sally-tan.jpg" alt="Sally Tan Shoes">
-        <h3>Sally (Tan) – $75.00</h3>
-        <p>US 6–11</p>
-        <select>
-          <option>Select Size</option>
-          <option>US 6</option><option>US 7</option><option>US 8</option><option>US 9</option><option>US 10</option><option>US 11</option>
-        </select>
-        <button>Order</button>
-      </div>
-      <div class="product-card">
-        <img src="images/heavenly-black.jpg" alt="Heavenly Shoes">
-        <h3>Heavenly – $90.00</h3>
-        <p>Black – US 6–11</p>
-        <select>
-          <option>Select Size</option>
-          <option>US 6</option><option>US 7</option><option>US 8</option><option>US 9</option><option>US 10</option><option>US 11</option>
-        </select>
-        <button>Order</button>
-      </div>
-      <div class="product-card">
-        <img src="images/clancy-blue.jpg" alt="Clancy Shoes">
-        <h3>Clancy – $59.00</h3>
-        <p>Blue – US 6–11</p>
-        <select>
-          <option>Select Size</option>
-          <option>US 6</option><option>US 7</option><option>US 8</option><option>US 9</option><option>US 10</option><option>US 11</option>
-        </select>
-        <button>Order</button>
-      </div>
+
+    <div class="product-card">
+      <img src="images/sally-tan.jpg" alt="Sally Tan">
+      <p><strong>Sally – Tan</strong> – US 6–11 – $75.00</p>
+      <label for="size-sally-tan">Size:</label>
+      <select id="size-sally-tan">
+        <option>6</option><option>7</option><option>8</option>
+        <option>9</option><option>10</option><option>11</option>
+      </select><br><br>
+      <button class="wishlist-btn">❤️ Add to Wishlist</button>
+      <button class="buy-btn">🛒 Buy Now (Coming Soon)</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/sally-black.jpg" alt="Sally Black">
+      <p><strong>Sally – Black</strong> – US 6–11 – $75.00</p>
+      <label for="size-sally-black">Size:</label>
+      <select id="size-sally-black">
+        <option>6</option><option>7</option><option>8</option>
+        <option>9</option><option>10</option><option>11</option>
+      </select><br><br>
+      <button class="wishlist-btn">❤️ Add to Wishlist</button>
+      <button class="buy-btn">🛒 Buy Now (Coming Soon)</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/heavenly-black.jpg" alt="Heavenly Black">
+      <p><strong>Heavenly</strong> – Black – US 6–11 – $90.00</p>
+      <label for="size-heavenly">Size:</label>
+      <select id="size-heavenly">
+        <option>6</option><option>7</option><option>8</option>
+        <option>9</option><option>10</option><option>11</option>
+      </select><br><br>
+      <button class="wishlist-btn">❤️ Add to Wishlist</button>
+      <button class="buy-btn">🛒 Buy Now (Coming Soon)</button>
+    </div>
+
+    <div class="product-card">
+      <img src="images/clancy-blue.jpg" alt="Clancy Blue">
+      <p><strong>Clancy</strong> – Blue – US 6–11 – $59.00</p>
+      <label for="size-clancy">Size:</label>
+      <select id="size-clancy">
+        <option>6</option><option>7</option><option>8</option>
+        <option>9</option><option>10</option><option>11</option>
+      </select><br><br>
+      <button class="wishlist-btn">❤️ Add to Wishlist</button>
+      <button class="buy-btn">🛒 Buy Now (Coming Soon)</button>
     </div>
   </section>
 
