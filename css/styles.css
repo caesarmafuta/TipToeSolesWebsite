@@ -1,5 +1,4 @@
-/* styles.css */
-
+/* RESET & BASICS */
 * {
   margin: 0;
   padding: 0;
@@ -27,7 +26,7 @@ img {
   display: block;
 }
 
-/* Header styles */
+/* HEADER */
 header {
   background: #fff;
   border-bottom: 1px solid #ddd;
@@ -42,22 +41,23 @@ header {
   height: 40px;
 }
 
+/* NAVIGATION */
 nav ul {
   display: flex;
   gap: 1rem;
-  flex-wrap: wrap;
 }
 
 nav ul li a {
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   font-weight: bold;
+  color: #333;
 }
 
 nav ul li a.current {
   border-bottom: 2px solid #000;
 }
 
-/* Hero Section */
+/* HERO SECTION */
 .hero {
   background: #222;
   color: white;
@@ -83,7 +83,7 @@ nav ul li a.current {
   font-weight: bold;
 }
 
-/* Sections */
+/* SECTIONS */
 .section {
   padding: 2rem;
   background: #fff;
@@ -94,50 +94,66 @@ nav ul li a.current {
   margin-bottom: 1rem;
 }
 
-/* Product Card Styles */
+/* PRODUCT CARDS */
 .product-card {
-  border: 1px solid #ccc;
-  padding: 16px;
-  margin: 16px;
-  max-width: 300px;
-  display: inline-block;
-  vertical-align: top;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 5px;
   text-align: center;
-  background-color: #fdfdfd;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  border-radius: 6px;
 }
 
 .product-card img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 12px;
+  height: 180px;
+  object-fit: cover;
+  margin-bottom: 1rem;
 }
 
-.product-card select {
-  padding: 5px;
-  margin-top: 8px;
-  width: 100%;
+.product-card p {
+  margin-bottom: 0.5rem;
 }
 
+/* BUTTON STYLES */
 .wishlist-btn,
 .buy-btn {
-  background-color: #f3f3f3;
-  border: 1px solid #bbb;
-  padding: 8px 12px;
-  margin: 6px 4px;
-  font-size: 0.9em;
+  padding: 0.5rem 1rem;
+  border: none;
+  margin: 0.25rem;
+  border-radius: 3px;
   cursor: pointer;
-  border-radius: 4px;
-  transition: background 0.2s;
 }
 
-.wishlist-btn:hover,
-.buy-btn:hover {
-  background-color: #ddd;
+.wishlist-btn {
+  background-color: #ffd1dc;
 }
 
-/* Footer */
+.buy-btn {
+  background-color: #cfcfcf;
+  color: #333;
+}
+
+/* FORM STYLES */
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+form button {
+  padding: 0.75rem 1.5rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+/* FOOTER */
 footer {
   background: #eee;
   text-align: center;
@@ -146,20 +162,23 @@ footer {
   margin-top: 2rem;
 }
 
-/* Responsive */
+/* RESPONSIVENESS */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .product-card {
+    margin: 1rem auto;
   }
 
   .hero h1 {
     font-size: 2rem;
-  }
-
-  .product-card {
-    max-width: 90%;
-    margin: 1rem auto;
-    display: block;
   }
 }
