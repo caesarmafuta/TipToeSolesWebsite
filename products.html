@@ -1,4 +1,6 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>TipToe Soles | Products</title>
@@ -13,14 +15,14 @@
       </a>
     </div>
     <nav>
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="products.html">Products</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="products.html" class="current">Products</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
   </div>
 
   <div class="main-content">
@@ -35,7 +37,7 @@
           <option>6</option><option>7</option><option>8</option>
           <option>9</option><option>10</option><option>11</option>
         </select><br><br>
-        <button class="wishlist-btn">❤️ Add to Wishlist</button>
+        <button class="wishlist-btn" data-name="GARY – Tan" data-price="79.00">❤️ Add to Wishlist</button>
         <button class="buy-btn">🛒 Buy Now (Coming Soon)</button>
       </div>
 
@@ -47,7 +49,7 @@
           <option>6</option><option>7</option><option>8</option>
           <option>9</option><option>10</option><option>11</option>
         </select><br><br>
-        <button class="wishlist-btn">❤️ Add to Wishlist</button>
+        <button class="wishlist-btn" data-name="Work and Walk – Chestnut" data-price="85.00">❤️ Add to Wishlist</button>
         <button class="buy-btn">🛒 Buy Now (Coming Soon)</button>
       </div>
 
@@ -61,7 +63,7 @@
           <option>6</option><option>7</option><option>8</option>
           <option>9</option><option>10</option><option>11</option>
         </select><br><br>
-        <button class="wishlist-btn">❤️ Add to Wishlist</button>
+        <button class="wishlist-btn" data-name="Sally – Tan" data-price="75.00">❤️ Add to Wishlist</button>
         <button class="buy-btn">🛒 Buy Now (Coming Soon)</button>
       </div>
 
@@ -73,7 +75,7 @@
           <option>6</option><option>7</option><option>8</option>
           <option>9</option><option>10</option><option>11</option>
         </select><br><br>
-        <button class="wishlist-btn">❤️ Add to Wishlist</button>
+        <button class="wishlist-btn" data-name="Sally – Black" data-price="75.00">❤️ Add to Wishlist</button>
         <button class="buy-btn">🛒 Buy Now (Coming Soon)</button>
       </div>
 
@@ -85,7 +87,7 @@
           <option>6</option><option>7</option><option>8</option>
           <option>9</option><option>10</option><option>11</option>
         </select><br><br>
-        <button class="wishlist-btn">❤️ Add to Wishlist</button>
+        <button class="wishlist-btn" data-name="Heavenly – Black" data-price="90.00">❤️ Add to Wishlist</button>
         <button class="buy-btn">🛒 Buy Now (Coming Soon)</button>
       </div>
 
@@ -97,27 +99,50 @@
           <option>6</option><option>7</option><option>8</option>
           <option>9</option><option>10</option><option>11</option>
         </select><br><br>
-        <button class="wishlist-btn">❤️ Add to Wishlist</button>
+        <button class="wishlist-btn" data-name="Clancy – Blue" data-price="59.00">❤️ Add to Wishlist</button>
         <button class="buy-btn">🛒 Buy Now (Coming Soon)</button>
       </div>
     </section>
 
-   <footer>
-  <p>&copy; 2025 TipToe Soles. All rights reserved.</p>
-
-  <div class="social-links">
-    <a href="https://www.facebook.com/" target="_blank">Facebook</a> |
-    <a href="https://www.instagram.com/" target="_blank">Instagram</a> |
-    <a href="https://www.tiktok.com/" target="_blank">TikTok</a>
+    <footer>
+      <p>&copy; 2025 TipToe Soles. All rights reserved.</p>
+      <div class="social-links">
+        <a href="https://www.facebook.com" target="_blank">Facebook</a> |
+        <a href="https://www.instagram.com" target="_blank">Instagram</a> |
+        <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+      </div>
+      <p>
+        <a href="returns.html">Return Policy</a> |
+        <a href="exchange.html">Exchange Policy</a> |
+        <a href="delivery.html">Delivery Info</a>
+      </p>
+    </footer>
   </div>
 
-  <p>
-    <a href="returns.html">Return Policy</a> |
-    <a href="exchange.html">Exchange Policy</a> |
-    <a href="delivery.html">Delivery Info</a>
-  </p>
-</footer>
-  </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const wishlistButtons = document.querySelectorAll('.wishlist-btn');
 
+      wishlistButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const name = button.dataset.name;
+          const price = button.dataset.price;
+
+          const item = { name, price };
+
+          let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
+
+          const exists = wishlist.some(product => product.name === name);
+          if (!exists) {
+            wishlist.push(item);
+            localStorage.setItem('wishlist', JSON.stringify(wishlist));
+            alert(`${name} added to wishlist! ❤️`);
+          } else {
+            alert(`${name} is already in your wishlist.`);
+          }
+        });
+      });
+    });
+  </script>
 </body>
 </html>
