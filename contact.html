@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header>
+
+  <div class="sidebar">
     <div class="logo">
       <a href="index.html">
         <img src="images/tiptoe-soles-logo.png" alt="TipToe Soles Logo">
@@ -21,51 +22,56 @@
         <li><a href="contact.html" class="current">Contact</a></li>
       </ul>
     </nav>
-  </header>
+  </div>
 
-  <section class="section">
-    <h2>Contact Us</h2>
-    <p>We'd love to hear from you. Whether it’s a question about your order or feedback on our shoes, get in touch with us!</p>
+  <div class="main-content">
 
-    <div class="contact-info">
-      <p><strong>Phone:</strong> <a href="tel:+61292105000">02 9210 5000</a></p>
-      <p><strong>Email:</strong> <a href="mailto:info@tiptoesoles.com.au">info@tiptoesoles.com.au</a></p>
-      <p><strong>Address:</strong> 225 George Street, Sydney, NSW 2000</p>
-      <p><strong>ABN:</strong> 83 109 016 664</p>
-    </div>
+    <section class="section">
+      <h2>Contact Us</h2>
+      <p>We'd love to hear from you. Whether it’s a question about your order or feedback on our shoes, get in touch with us!</p>
 
-    <form action="#" method="post">
-      <label for="name">Your Name</label><br>
-      <input type="text" id="name" name="name" required><br><br>
+      <div class="contact-info">
+        <p><strong>Phone:</strong> <a href="tel:+61292105000">02 9210 5000</a></p>
+        <p><strong>Email:</strong> <a href="mailto:info@tiptoesoles.com.au">info@tiptoesoles.com.au</a></p>
+        <p><strong>Address:</strong> 225 George Street, Sydney, NSW 2000</p>
+        <p><strong>ABN:</strong> 83 109 016 664</p>
+      </div>
 
-      <label for="email">Your Email</label><br>
-      <input type="email" id="email" name="email" required><br><br>
+      <form action="#" method="post">
+        <label for="name">Your Name</label><br>
+        <input type="text" id="name" name="name" required><br><br>
 
-      <label for="message">Your Message</label><br>
-      <textarea id="message" name="message" rows="6" required></textarea><br><br>
+        <label for="email">Your Email</label><br>
+        <input type="email" id="email" name="email" required><br><br>
 
-      <button type="submit" disabled>Send Message (Coming Soon)</button>
-    </form>
-  </section>
+        <label for="message">Your Message</label><br>
+        <textarea id="message" name="message" rows="6" required></textarea><br><br>
 
-  <section class="section">
-    <h2>Find Us</h2>
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.3448801937153!2d151.20616717572598!3d-33.86341592085668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae3a64dc0c1b%3A0x66c43424f05cf1ba!2s225%20George%20St%2C%20Sydney%20NSW%202000%2C%20Australia!5e0!3m2!1sen!2sau!4v1716880030001!5m2!1sen!2sau" 
-      style="width:100%; height:350px; border:0;" 
-      allowfullscreen 
-      loading="lazy" 
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-  </section>
+        <button type="submit" disabled>Send Message (Coming Soon)</button>
+      </form>
+    </section>
 
-  <footer>
-    <p>&copy; 2025 TipToe Soles. All rights reserved.</p>
-    <p>
-      <a href="returns.html">Return Policy</a> |
-      <a href="exchange.html">Exchange Policy</a> |
-      <a href="delivery.html">Delivery Info</a>
-    </p>
-  </footer>
+    <section class="section">
+      <h2>Find Us</h2>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.3448801937153!2d151.20616717572598!3d-33.86341592085668!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12ae3a64dc0c1b%3A0x66c43424f05cf1ba!2s225%20George%20St%2C%20Sydney%20NSW%202000%2C%20Australia!5e0!3m2!1sen!2sau!4v1716880030001!5m2!1sen!2sau" 
+        style="width:100%; height:350px; border:0;" 
+        allowfullscreen 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 TipToe Soles. All rights reserved.</p>
+      <p>
+        <a href="returns.html">Return Policy</a> |
+        <a href="exchange.html">Exchange Policy</a> |
+        <a href="delivery.html">Delivery Info</a>
+      </p>
+    </footer>
+
+  </div>
+
 </body>
 </html>
