@@ -1,19 +1,4 @@
-.social-links {
-  margin: 1rem 0;
-}
-
-.social-links a {
-  margin: 0 0.5rem;
-  color: #333;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.social-links a:hover {
-  text-decoration: underline;
-  color: #0077cc;
-}
-
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -117,6 +102,40 @@ img {
   margin-bottom: 1rem;
 }
 
+/* Latest Arrivals Banner */
+.latest-banner {
+  background-color: #fff;
+  padding: 2rem;
+  text-align: center;
+}
+
+.latest-banner h2 {
+  margin-bottom: 1.5rem;
+}
+
+.banner-products {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.product-highlight {
+  background-color: #fafafa;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  max-width: 200px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.product-highlight img {
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
 /* Product Card Styles */
 .product-card {
   border: 1px solid #ccc;
@@ -158,6 +177,23 @@ img {
 .wishlist-btn:hover,
 .buy-btn:hover {
   background-color: #ddd;
+}
+
+/* Social Links */
+.social-links {
+  margin: 1rem 0;
+}
+
+.social-links a {
+  margin: 0 0.5rem;
+  color: #333;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+  color: #0077cc;
 }
 
 /* Footer */
@@ -206,5 +242,10 @@ footer {
     max-width: 90%;
     margin: 1rem auto;
     display: block;
+  }
+
+  .banner-products {
+    flex-direction: column;
+    align-items: center;
   }
 }
