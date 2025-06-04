@@ -26,7 +26,6 @@ img {
   display: block;
 }
 
-/* Sidebar Navigation */
 .sidebar {
   width: 200px;
   background-color: #fff;
@@ -58,13 +57,12 @@ img {
   padding-left: 8px;
 }
 
-/* Main Content Layout */
+
 .main-content {
   flex: 1;
   padding: 2rem;
 }
 
-/* Hero Section */
 .hero {
   background: #222;
   color: white;
@@ -90,7 +88,6 @@ img {
   font-weight: bold;
 }
 
-/* Explore / General Section */
 .section {
   padding: 2rem;
   background: #fff;
@@ -101,7 +98,6 @@ img {
   margin-bottom: 1rem;
 }
 
-/* Latest Arrivals Banner */
 .latest-banner {
   background-color: #fff;
   padding: 2rem;
@@ -135,7 +131,6 @@ img {
   margin-bottom: 1rem;
 }
 
-/* Product Cards (for Products Page) */
 .product-card {
   border: 1px solid #ccc;
   padding: 16px;
@@ -178,7 +173,6 @@ img {
   background-color: #ddd;
 }
 
-/* Social Media Links */
 .social-links {
   margin: 1rem 0;
 }
@@ -195,7 +189,6 @@ img {
   color: #0077cc;
 }
 
-/* Footer Styles */
 footer {
   background: #eee;
   text-align: center;
@@ -204,7 +197,6 @@ footer {
   margin-top: 2rem;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   body {
     flex-direction: column;
