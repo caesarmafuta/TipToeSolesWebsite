@@ -85,20 +85,17 @@ img {
   padding: 0.75rem 1.5rem;
   border-radius: 4px;
   font-weight: bold;
-  display: inline-block;
-  margin-bottom: 2rem;
 }
 
 .latest-arrivals {
+  margin-top: 3rem;
   background-color: #fff;
-  color: #000;
-  padding: 2rem;
-  margin-top: 2rem;
-  border-radius: 6px;
+  padding: 2rem 0;
 }
 
 .latest-arrivals h2 {
   margin-bottom: 1.5rem;
+  color: #000;
 }
 
 .banner-products {
@@ -134,46 +131,12 @@ img {
   margin-bottom: 1rem;
 }
 
-.product-card {
-  border: 1px solid #ccc;
-  padding: 16px;
-  margin: 16px;
-  max-width: 300px;
-  display: inline-block;
-  vertical-align: top;
+footer {
+  background: #eee;
   text-align: center;
-  background-color: #fdfdfd;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  border-radius: 6px;
-}
-
-.product-card img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 12px;
-}
-
-.product-card select {
-  padding: 5px;
-  margin-top: 8px;
-  width: 100%;
-}
-
-.wishlist-btn,
-.buy-btn {
-  background-color: #f3f3f3;
-  border: 1px solid #bbb;
-  padding: 8px 12px;
-  margin: 6px 4px;
-  font-size: 0.9em;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: background 0.2s;
-}
-
-.wishlist-btn:hover,
-.buy-btn:hover {
-  background-color: #ddd;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  margin-top: 2rem;
 }
 
 .social-links {
@@ -184,20 +147,11 @@ img {
   margin: 0 0.5rem;
   color: #333;
   font-weight: bold;
-  text-decoration: none;
 }
 
 .social-links a:hover {
   text-decoration: underline;
   color: #0077cc;
-}
-
-footer {
-  background: #eee;
-  text-align: center;
-  padding: 1.5rem;
-  font-size: 0.9rem;
-  margin-top: 2rem;
 }
 
 @media (max-width: 768px) {
@@ -230,12 +184,6 @@ footer {
 
   .hero h1 {
     font-size: 2rem;
-  }
-
-  .product-card {
-    max-width: 90%;
-    margin: 1rem auto;
-    display: block;
   }
 
   .banner-products {
