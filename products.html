@@ -25,6 +25,13 @@
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
+  <div class="search-login">
+    <form class="search-form">
+      <input type="text" placeholder="Search...">
+      <button type="submit">Search</button>
+    </form>
+    <a href="login.html" class="login-btn">Login</a>
+  </div>
 </div>
 
 <div class="main-content" id="main-content">
@@ -34,6 +41,11 @@
     <div class="product-card">
       <img src="images/gary-tan.jpg" alt="Gary Tan">
       <p><strong>GARY – Tan</strong> – US 6–11 – $79.00</p>
+      <label for="size-gary-tan">Size:</label>
+      <select id="size-gary-tan" name="size">
+        <option>6</option><option>7</option><option>8</option>
+        <option>9</option><option>10</option><option>11</option>
+      </select><br><br>
       <button class="wishlist-btn" data-name="GARY – Tan" data-price="79.00">❤️ Add to Wishlist</button>
       <button class="buy-btn">🛒 Buy Now (Coming Soon)</button>
     </div>
@@ -41,6 +53,11 @@
     <div class="product-card">
       <img src="images/work-and-walk-chestnut.jpg" alt="Work and Walk Chestnut">
       <p><strong>Work and Walk</strong> – Chestnut – US 6–11 – $85.00</p>
+      <label for="size-work">Size:</label>
+      <select id="size-work" name="size">
+        <option>6</option><option>7</option><option>8</option>
+        <option>9</option><option>10</option><option>11</option>
+      </select><br><br>
       <button class="wishlist-btn" data-name="Work and Walk – Chestnut" data-price="85.00">❤️ Add to Wishlist</button>
       <button class="buy-btn">🛒 Buy Now (Coming Soon)</button>
     </div>
@@ -50,6 +67,11 @@
     <div class="product-card">
       <img src="images/sally-tan.jpg" alt="Sally Tan">
       <p><strong>Sally</strong> – Tan – US 6–11 – $75.00</p>
+      <label for="size-sally-tan">Size:</label>
+      <select id="size-sally-tan" name="size">
+        <option>6</option><option>7</option><option>8</option>
+        <option>9</option><option>10</option><option>11</option>
+      </select><br><br>
       <button class="wishlist-btn" data-name="Sally – Tan" data-price="75.00">❤️ Add to Wishlist</button>
       <button class="buy-btn">🛒 Buy Now (Coming Soon)</button>
     </div>
@@ -57,6 +79,11 @@
     <div class="product-card">
       <img src="images/sally-black.jpg" alt="Sally Black">
       <p><strong>Sally</strong> – Black – US 6–11 – $75.00</p>
+      <label for="size-sally-black">Size:</label>
+      <select id="size-sally-black" name="size">
+        <option>6</option><option>7</option><option>8</option>
+        <option>9</option><option>10</option><option>11</option>
+      </select><br><br>
       <button class="wishlist-btn" data-name="Sally – Black" data-price="75.00">❤️ Add to Wishlist</button>
       <button class="buy-btn">🛒 Buy Now (Coming Soon)</button>
     </div>
@@ -64,6 +91,11 @@
     <div class="product-card">
       <img src="images/heavenly-black.jpg" alt="Heavenly Black">
       <p><strong>Heavenly</strong> – Black – US 6–11 – $90.00</p>
+      <label for="size-heavenly">Size:</label>
+      <select id="size-heavenly" name="size">
+        <option>6</option><option>7</option><option>8</option>
+        <option>9</option><option>10</option><option>11</option>
+      </select><br><br>
       <button class="wishlist-btn" data-name="Heavenly – Black" data-price="90.00">❤️ Add to Wishlist</button>
       <button class="buy-btn">🛒 Buy Now (Coming Soon)</button>
     </div>
@@ -71,6 +103,11 @@
     <div class="product-card">
       <img src="images/clancy-blue.jpg" alt="Clancy Blue">
       <p><strong>Clancy</strong> – Blue – US 6–11 – $59.00</p>
+      <label for="size-clancy">Size:</label>
+      <select id="size-clancy" name="size">
+        <option>6</option><option>7</option><option>8</option>
+        <option>9</option><option>10</option><option>11</option>
+      </select><br><br>
       <button class="wishlist-btn" data-name="Clancy – Blue" data-price="59.00">❤️ Add to Wishlist</button>
       <button class="buy-btn">🛒 Buy Now (Coming Soon)</button>
     </div>
@@ -90,28 +127,6 @@
     </p>
   </footer>
 </div>
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-  const wishlistButtons = document.querySelectorAll('.wishlist-btn');
-  wishlistButtons.forEach(button => {
-    button.addEventListener('click', () => {
-      const name = button.dataset.name;
-      const price = button.dataset.price;
-      const item = { name, price };
-      let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-      const exists = wishlist.some(product => product.name === name);
-      if (!exists) {
-        wishlist.push(item);
-        localStorage.setItem('wishlist', JSON.stringify(wishlist));
-        alert(`${name} added to wishlist! ❤️`);
-      } else {
-        alert(`${name} is already in your wishlist.`);
-      }
-    });
-  });
-});
-</script>
 
 </body>
 </html>
