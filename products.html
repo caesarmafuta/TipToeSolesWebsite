@@ -98,6 +98,7 @@
       <button class="wishlist-btn" data-name="Clancy – Blue" data-price="59.00">❤️ Add to Wishlist</button>
       <button class="buy-btn">🛒 Buy Now (Coming Soon)</button>
     </div>
+
   </section>
 
   <footer>
@@ -114,28 +115,6 @@
     </p>
   </footer>
 </div>
-
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const wishlistButtons = document.querySelectorAll('.wishlist-btn');
-    wishlistButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        const name = button.dataset.name;
-        const price = button.dataset.price;
-        const item = { name, price };
-        let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
-        const exists = wishlist.some(product => product.name === name);
-        if (!exists) {
-          wishlist.push(item);
-          localStorage.setItem('wishlist', JSON.stringify(wishlist));
-          alert(`${name} added to wishlist! ❤️`);
-        } else {
-          alert(`${name} is already in your wishlist.`);
-        }
-      });
-    });
-  });
-</script>
 
 </body>
 </html>
