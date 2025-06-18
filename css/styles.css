@@ -26,21 +26,6 @@ img {
   display: block;
 }
 
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: #000;
-  color: #fff;
-  padding: 8px;
-  z-index: 100;
-  text-decoration: none;
-}
-
-.skip-link:focus {
-  top: 10px;
-}
-
 .sidebar {
   width: 200px;
   background-color: #fff;
@@ -81,8 +66,7 @@ img {
   background: #222;
   color: white;
   text-align: center;
-  padding: 5rem 1rem 8rem 1rem;
-  position: relative;
+  padding: 5rem 1rem;
 }
 
 .hero h1 {
@@ -104,14 +88,9 @@ img {
 }
 
 .latest-arrivals {
+  margin-top: 3rem;
   background-color: #fff;
   padding: 2rem 0;
-  position: absolute;
-  bottom: -150px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  box-shadow: 0 -5px 10px rgba(0,0,0,0.05);
 }
 
 .latest-arrivals h2 {
@@ -121,7 +100,7 @@ img {
 
 .banner-products {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
   gap: 1rem;
 }
@@ -143,7 +122,7 @@ img {
 }
 
 .section {
-  padding: 5rem 2rem 2rem 2rem;
+  padding: 2rem;
   background: #fff;
   margin: 1rem 0;
 }
@@ -175,11 +154,6 @@ footer {
   color: #0077cc;
 }
 
-a:focus, button:focus, input:focus, select:focus, textarea:focus {
-  outline: 3px solid #0077cc;
-  outline-offset: 2px;
-}
-
 @media (max-width: 768px) {
   body {
     flex-direction: column;
@@ -206,10 +180,6 @@ a:focus, button:focus, input:focus, select:focus, textarea:focus {
 
   .main-content {
     padding: 1rem;
-  }
-
-  .hero {
-    padding-bottom: 12rem;
   }
 
   .hero h1 {
