@@ -1,4 +1,4 @@
-{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -24,6 +24,26 @@ ul {
 img {
   max-width: 100%;
   display: block;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skip-link:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 1rem;
+  padding: 0.5rem 1rem;
+  background: #000;
+  color: #fff;
+  z-index: 1000;
 }
 
 .sidebar {
@@ -105,20 +125,6 @@ img {
   padding: 2rem;
 }
 
-.hero-title, .hero-subtitle {
-  text-align: center;
-}
-
-.hero-title h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.hero-subtitle p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
 .section {
   padding: 2rem;
   background: #fff;
@@ -126,29 +132,6 @@ img {
 }
 
 .section h2 {
-  margin-bottom: 1rem;
-}
-
-.banner-products {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.product-highlight {
-  background-color: #fafafa;
-  padding: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  max-width: 200px;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.product-highlight img {
-  height: 150px;
-  object-fit: contain;
   margin-bottom: 1rem;
 }
 
@@ -202,33 +185,4 @@ footer {
   .main-content {
     padding: 1rem;
   }
-
-  .hero-title h1 {
-    font-size: 2rem;
-  }
-
-  .banner-products {
-    flex-direction: column;
-    align-items: center;
-  }
-  .skip-link {
-  position: absolute;
-  left: -999px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-.skip-link:focus {
-  position: absolute;
-  left: 10px;
-  top: 10px;
-  width: auto;
-  height: auto;
-  background: #000;
-  color: #fff;
-  padding: 8px 16px;
-  z-index: 1000;
-}
 }
